@@ -170,3 +170,46 @@ a:focus-visible, button:focus-visible { outline: 2px solid #efdbc1; outline-offs
   .about .content, .resume .resume-item, .portfolio figure,
   .skills .skills-content, .services-page .section > .container { padding: 18px; }
 }
+
+/* Vienoda palete visuose puslapiuose, skirtingas kiekvienos skilties akcentas */
+body { --page-accent: #ffc66a; }
+.about-page { --page-accent: #57d0d5; }
+.resume-page { --page-accent: #ffb577; }
+.services-page { --page-accent: #55b8f5; }
+.portfolio-page { --page-accent: #b6a1ee; }
+.contact-page { --page-accent: #57d0d5; }
+.page-title .heading h1, .section-title h2 { color: var(--page-accent); }
+.page-title nav .current { color: var(--page-accent); }
+.navmenu a.active, .navmenu a:hover { color: var(--page-accent); }
+.navmenu > ul > li > a::before { background: var(--page-accent); }
+.hero p .typed { color: #57d0d5; border-bottom-color: #258fe0; }
+.hero .social-links a { background: #1c222a; color: #55b8f5; }
+.hero .social-links a:nth-child(2) { color: #ffc66a; }
+.hero .social-links a:nth-child(3) { color: #ffb577; }
+.hero .social-links a:nth-child(4) { color: #b6a1ee; }
+.hero .social-links a:hover { background: #194c72; color: #ffffff; }
+.about .content .col-lg-6:first-child strong { color: #ffc66a; }
+.about .content .col-lg-6:last-child strong { color: #57d0d5; }
+.about .content .col-lg-6:last-child i { color: #21b5bf; }
+.resume .col-lg-6:first-child .resume-title { color: #ffb577; }
+.resume .col-lg-6:last-child .resume-item h4 { color: #55b8f5; }
+.resume .resume-item h5 { color: #ffc66a; background: #30271e; }
+.resume .col-lg-6:last-child .resume-item h5 { color: #57d0d5; background: #173239; }
+.resume .col-lg-6:last-child .resume-item::before { border-color: #258fe0; }
+#services > .container > h2 { color: #55b8f5; }
+.services-page .section:last-child h2 { color: #b6a1ee; }
+.services-page .section:last-child .col-lg-6:nth-child(1) h3 { color: #ffb577; }
+.services-page .section:last-child .col-lg-6:nth-child(2) h3 { color: #55b8f5; }
+.services-page .section:last-child .col-lg-6:nth-child(3) h3 { color: #57d0d5; }
+#services .table tbody tr:nth-child(1) th { color: #ffc66a; }
+#services .table tbody tr:nth-child(2) th { color: #55b8f5; }
+#services .table tbody tr:nth-child(3) th { color: #57d0d5; }
+.contact .info-item .icon { background: #171c23; }
+.contact .col-md-6:nth-child(1) h3 { color: #ffc66a; }
+.contact .col-md-6:nth-child(2) h3 { color: #55b8f5; }
+.contact .col-md-6:nth-child(3) h3 { color: #57d0d5; }
+.contact .col-md-6:nth-child(4) h3 { color: #b6a1ee; }
+.contact .info-item .social-links a { color: #b6a1ee; }
+.contact .info-item .social-links a:hover { color: #57d0d5; }
+.contact .php-email-form input, .contact .php-email-form textarea { background: #151b22; border-color: #43566b; color: #efdbc1; }
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus { border-color: #21b5bf; }
