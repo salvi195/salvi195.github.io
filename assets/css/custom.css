@@ -3,25 +3,25 @@
   --default-font: "Segoe UI", Arial, sans-serif;
   --heading-font: Georgia, serif;
   --nav-font: "Segoe UI", Arial, sans-serif;
-  --background-color: #191716;
-  --surface-color: #2b2521;
+  --background-color: #131416;
+  --surface-color: #24201e;
   --default-color: #ddcfc0;
   --heading-color: #efdbc1;
-  --accent-color: #c99868;
-  --contrast-color: #191716;
+  --accent-color: #f3a62f;
+  --contrast-color: #131416;
   --nav-color: #ddcfc0;
   --nav-hover-color: #efdbc1;
-  --nav-mobile-background-color: #2b2521;
-  --nav-dropdown-background-color: #2b2521;
+  --nav-mobile-background-color: #24201e;
+  --nav-dropdown-background-color: #24201e;
   --nav-dropdown-color: #ddcfc0;
   --nav-dropdown-hover-color: #efdbc1;
 }
 .dark-background, .light-background {
-  --background-color: #191716;
-  --surface-color: #2b2521;
+  --background-color: #131416;
+  --surface-color: #24201e;
   --default-color: #ddcfc0;
   --heading-color: #efdbc1;
-  --contrast-color: #191716;
+  --contrast-color: #131416;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
@@ -38,26 +38,26 @@ h5 { font-size: 1.2rem; }
 h6 { font-size: 1rem; }
 .hero h2 { font-size: 3.2rem; font-weight: 400; }
 .about .content h2 { font-size: 1.6rem; font-weight: 400; }
-.resume .resume-item h4 { color: #cf9f85; text-transform: none; }
+.resume .resume-item h4 { color: #efac66; text-transform: none; }
 p { font-size: 1.05rem; line-height: 1.85; color: var(--default-color); margin-bottom: 1.2rem; }
 .hero p { font-size: 1.3rem; }
 .contact .info-item p { font-size: 1.05rem; color: var(--default-color); }
 
 /* 3. Mygtukai ir nuorodos */
-.main p a { color: #a3b3c4; text-decoration: underline; text-underline-offset: 4px; }
+.main p a { color: #55b8f5; text-decoration: underline; text-underline-offset: 4px; }
 a:hover, .main p a:hover { color: #efdbc1; }
-a:active { color: #cf9f85; }
+a:active { color: #efac66; }
 a:focus-visible, button:focus-visible { outline: 2px solid #efdbc1; outline-offset: 4px; }
 .contact .php-email-form button[type=submit], .scroll-top {
-  background: #c99868;
-  color: #191716;
-  border: 1px solid #e0b88c;
+  background: #f3a62f;
+  color: #131416;
+  border: 1px solid #ffc66a;
   border-radius: 6px;
   box-shadow: 0 3px 10px #00000025;
 }
 .contact .php-email-form button[type=submit] { padding: 12px 30px; }
-.contact .php-email-form button[type=submit]:hover, .scroll-top:hover { background: #efdbc1; color: #191716; }
-.contact .php-email-form button[type=submit]:active, .scroll-top:active { background: #b98460; transform: translateY(2px); }
+.contact .php-email-form button[type=submit]:hover, .scroll-top:hover { background: #efdbc1; color: #131416; }
+.contact .php-email-form button[type=submit]:active, .scroll-top:active { background: #e27632; transform: translateY(2px); }
 
 /* 4. Tarpai ir turinio blokai */
 .about, .resume, .portfolio { padding: 48px 0; margin-bottom: 24px; }
@@ -70,34 +70,38 @@ a:focus-visible, button:focus-visible { outline: 2px solid #efdbc1; outline-offs
   border-radius: 10px;
   box-shadow: 0 8px 24px #00000020;
 }
-.about .content { margin-top: 12px; border-top: 2px solid #c99868; }
+.about .content { margin-top: 12px; border-top: 2px solid #f3a62f; }
 .about img, .portfolio img { border-radius: 6px; }
-.resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid #cf9f85; }
+.resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid #efac66; }
 .resume .resume-item:last-child { padding-bottom: 28px; }
-.portfolio figure { height: 100%; margin: 0; padding: 20px; border-top: 2px solid #b98460; }
-.portfolio .col-lg-4:nth-child(2) figure { border-top-color: #a3b3c4; }
-.portfolio .col-lg-4:nth-child(3) figure { border-top-color: #cf9f85; }
+.portfolio figure { height: 100%; margin: 0; padding: 20px; border-top: 2px solid #e27632; }
+.portfolio .col-lg-4:nth-child(2) figure { border-top-color: #55b8f5; }
+.portfolio .col-lg-4:nth-child(3) figure { border-top-color: #8b76c8; }
 .services-page .section > .container { width: calc(100% - 24px); }
 .contact .php-email-form { margin-top: 28px; }
 
 /* 5. Navigacijos juosta: fonas, krastine, seselis, tarpai */
 .header, .scrolled .header {
-  background: #211c19;
-  border-bottom: 1px solid #6b503b;
+  background: #161a20;
+  border-bottom: 1px solid #80562f;
   box-shadow: 0 4px 16px #00000030;
   padding: 14px 0;
 }
 /* Progreso juostos: fonas, aukstis, krastine ir apvalumas */
 .skills .progress { height: 72px; }
-.skills .progress-bar-wrap { height: 12px; background: #191716; border: 1px solid #624b3a; border-radius: 6px; overflow: hidden; }
-.skills .progress-bar { height: 10px; background: #c99868; border-radius: 5px; }
-.skills .progress:nth-child(2) .progress-bar { background: #a3b3c4; }
-.skills .progress:nth-child(3) .progress-bar { background: #cf9f85; }
+.skills .progress-bar-wrap { height: 12px; background: #131416; border: 1px solid #3e4651; border-radius: 6px; overflow: hidden; }
+/* Sesios spalvos is kailio ir monitoriu, be pasteliniu juostu */
+.skills .progress-bar { height: 10px; background: #f3a62f; border-radius: 5px; }
+.skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: #258fe0; }
+.skills .col-lg-6:first-child .progress:nth-child(3) .progress-bar { background: #e27632; }
+.skills .col-lg-6:last-child .progress:nth-child(1) .progress-bar { background: #21b5bf; }
+.skills .col-lg-6:last-child .progress:nth-child(2) .progress-bar { background: #d95d43; }
+.skills .col-lg-6:last-child .progress:nth-child(3) .progress-bar { background: #8b76c8; }
 
 /* Papildoma 1. Sarasu pseudo-elementai ir skaitiklis */
 #services ul, #services ol { list-style: none; padding-left: 0; }
 #services li { position: relative; padding-left: 28px; margin-bottom: 14px; line-height: 1.75; }
-#services ul > li::before { content: "\2022"; position: absolute; left: 6px; color: #c99868; }
+#services ul > li::before { content: "\2022"; position: absolute; left: 6px; color: #f3a62f; }
 #services ol { counter-reset: etapas; }
 #services ol > li { counter-increment: etapas; padding-left: 40px; }
 #services ol > li::before {
@@ -105,33 +109,59 @@ a:focus-visible, button:focus-visible { outline: 2px solid #efdbc1; outline-offs
   position: absolute;
   left: 0;
   width: 28px;
-  border: 1px solid #a3b3c4;
+  border: 1px solid #55b8f5;
   border-radius: 5px;
-  color: #a3b3c4;
+  color: #55b8f5;
   text-align: center;
 }
-#services ul ul { margin-top: 12px; padding: 12px; background: #382c23; border-left: 2px solid #c99868; font-size: 0.95rem; }
+#services ul ul { margin-top: 12px; padding: 12px; background: #30271e; border-left: 2px solid #f3a62f; font-size: 0.95rem; }
 #services ul ul > li::before { content: "\2013"; color: #efdbc1; }
 #services ul ul > li:last-child { margin-bottom: 0; }
 
 /* Papildoma 2. Lenteles antraste, zebra ir lygiavimas */
-#services .table { --bs-table-bg: #2b2521; --bs-table-color: #ddcfc0; --bs-table-border-color: #514137; }
+#services .table { --bs-table-bg: #24201e; --bs-table-color: #ddcfc0; --bs-table-border-color: #514137; }
 #services .table th, #services .table td { padding: 16px; text-align: center; vertical-align: middle; }
-#services .table thead th { background: #634a35; color: #f3e3cf; font-weight: 600; }
-#services .table tbody tr:nth-child(even) > * { background: #352a23; }
-#services .table tbody tr:hover > * { background: #49372b; }
+#services .table thead th { background: #194c72; color: #f3e3cf; font-weight: 600; }
+#services .table tbody tr:nth-child(even) > * { background: #292d33; }
+#services .table tbody tr:hover > * { background: #3b3027; }
 #services .table caption { padding: 12px 0; }
 
 /* Nuotrauku tonai: kakava, karamele, varis ir monitoriu melyna */
-.page-title nav { background: #30251e; }
+.page-title nav { background: #242a32; }
 .about .content { background: #302720; }
-.skills .skills-content { background: #252528; }
+.skills .skills-content { background: #1c222a; }
 .resume .resume-item { background: #2d2420; }
 .portfolio figure { background: #2c2520; }
-.portfolio .col-lg-4:nth-child(2) figure { background: #25282c; }
+.portfolio .col-lg-4:nth-child(2) figure { background: #202a35; }
 .portfolio .col-lg-4:nth-child(3) figure { background: #322721; }
-.contact .info-item { border-color: #6b503b; }
+.contact .info-item { border-color: #80562f; background: #2a231e; }
+.contact .col-md-6:nth-child(even) .info-item { background: #202a35; border-color: #43566b; }
+.resume .col-lg-6:last-child .resume-item { background: #20262e; border-left-color: #258fe0; }
+.contact .php-email-form { background: #1c222a; }
+.services-page .section > .container { background: #211f1e; }
 .footer { background: #151311; border-top: 1px solid #514137; }
+
+/* Ryskus monitoriu akcentai ant tamsiu, nuotraukai artimu fonu */
+.about .content h2 { color: #ffc66a; }
+.resume .col-lg-6:last-child .resume-title { color: #55b8f5; }
+.portfolio .col-lg-4:nth-child(1) h2 { color: #ffb577; }
+.portfolio .col-lg-4:nth-child(2) h2 { color: #55b8f5; }
+.portfolio .col-lg-4:nth-child(3) h2 { color: #b6a1ee; }
+#services .col-md-6:first-child h2 { color: #ffc66a; }
+#services .col-md-6:last-child h2 { color: #57d0d5; }
+#services ol > li::before { color: #57d0d5; border-color: #21b5bf; }
+.contact .col-md-6:nth-child(1) .icon { color: #f3a62f; }
+.contact .col-md-6:nth-child(2) .icon { color: #55b8f5; }
+.contact .col-md-6:nth-child(3) .icon { color: #57d0d5; }
+.contact .col-md-6:nth-child(4) .icon { color: #b6a1ee; }
+
+/* Apacios piktogramos: tamsus pagrindas, skirtingi akcentai */
+.footer .social-links a { background: #242a32; color: #55b8f5; }
+.footer .social-links a:nth-child(1) { color: #ffc66a; }
+.footer .social-links a:nth-child(3) { color: #ffb577; }
+.footer .social-links a:nth-child(4) { color: #57d0d5; }
+.footer .social-links a:nth-child(5) { color: #b6a1ee; }
+.footer .social-links a:hover { background: #384b5d; color: #ffffff; }
 
 /* Mazesni tarpai ir antrastes telefone */
 @media (max-width: 767px) {
