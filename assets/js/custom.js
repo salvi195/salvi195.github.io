@@ -154,8 +154,8 @@ if (board) {
     else if (level === 3) file = 'level-3.svg';
     else file = 'level-4.svg';
     const avatar = document.querySelector('#level-avatar');
-    avatar.src = 'assets/img/' + file;
-    avatar.alt = 'Personažas – ' + level + ' lygis';
+    avatar.src = 'assets/img/' + file + '?v=raccoon-1';
+    avatar.alt = 'Meškėnas – ' + level + ' lygis';
   }
 
   function updateProgress() {

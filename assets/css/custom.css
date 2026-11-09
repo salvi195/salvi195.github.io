@@ -7,6 +7,7 @@
   --aqua: #33e6e3;
   --violet: #b18ae2;
   --gold: #fdc749;
+  --divider-color: #6d421b;
   --panel-border: #302a24;
   --page-accent: var(--orange);
   --default-font: "Segoe UI", Arial, sans-serif;
@@ -79,7 +80,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
   border-radius: 10px;
   box-shadow: 0 8px 24px #00000050;
 }
-.about .content { margin-top: 12px; border-top: 2px solid var(--orange); }
+.about .content { margin-top: 12px; border-top: 2px solid var(--gold); }
 .about img, .portfolio img { border-radius: 6px; }
 .resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid var(--red); }
 .resume .resume-item:last-child { padding-bottom: 28px; }
@@ -92,7 +93,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 /* 5. Navigacijos juosta: fonas, krastine, seselis, tarpai */
 .header, .scrolled .header {
   background: #0b0b0d;
-  border-bottom: 1px solid #6d421b;
+  border-bottom: 1px solid var(--divider-color);
   box-shadow: 0 4px 16px #00000030;
   padding: 14px 0;
 }
@@ -140,10 +141,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-item h4,
 .footer .sitename, .skills .progress .skill { color: var(--heading-color); }
 .glightbox-container .goverlay { background: #0b0b0d; }
-.page-title nav { background: #0b0b0d; border-top: 1px solid var(--panel-border); border-bottom: 1px solid var(--panel-border); }
+.page-title nav { background: #0b0b0d; border-top: 1px solid var(--divider-color); border-bottom: 1px solid var(--divider-color); }
 .footer { background: #0b0b0d; }
-.footer { border-top: 1px solid var(--panel-border); }
-.footer .copyright { border-top-color: #24486b; }
+.footer { border-top: 1px solid var(--divider-color); }
+.footer .copyright { border-top-color: var(--divider-color); }
 .navmenu a.active, .navmenu a:hover { color: var(--accent-color); }
 .mobile-nav-active .navmenu { background: #0b0b0d; }
 .mobile-nav-active .mobile-nav-toggle { color: var(--heading-color); }
@@ -333,7 +334,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* LD12: įgūdžių lenta */
 .progress-profile, .skill-column, .achievement { background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 10px; padding: 24px; }
-.progress-profile { display: flex; gap: 28px; align-items: center; }
+.progress-profile { border-color: var(--divider-color); display: flex; gap: 28px; align-items: center; }
 .progress-details { flex: 1; }
 .progress-details p { margin: 8px 0; }
 #xp-total { color: var(--gold); font-size: 1.3rem; }
@@ -344,9 +345,9 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .board-heading { margin: 36px 0 22px; }
 #skill-board, .achievements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .skill-column { padding: 18px; overflow: visible; }
-.skill-column:nth-child(1) { border-top: 2px solid var(--orange); }
-.skill-column:nth-child(2) { border-top: 2px solid var(--blue); }
-.skill-column:nth-child(3) { border-top: 2px solid var(--aqua); }
+.skill-column:nth-child(1) { border-top: 2px solid var(--gold); }
+.skill-column:nth-child(2) { border-top: 2px solid var(--gold); }
+.skill-column:nth-child(3) { border-top: 2px solid var(--gold); }
 .skill-column h3 { font-size: 1.4rem; margin-bottom: 24px; }
 .skill-card { padding: 18px; margin-bottom: 14px; background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 8px; }
 .skill-card h4 { font-size: 1.1rem; }
@@ -360,3 +361,5 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .avatar-credit { margin-top: 28px; font-size: 0.9rem; }
 @media (max-width: 900px) { #skill-board, .achievements { grid-template-columns: 1fr; } }
 @media (max-width: 575px) { .progress-profile { flex-direction: column; align-items: stretch; } .progress-profile img { align-self: center; } }
+
+.progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; border-radius: 8px; }
