@@ -287,7 +287,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   background: linear-gradient(120deg, #0b0b0d, #11100e, #0b0e12) padding-box,
               linear-gradient(120deg, var(--orange), var(--blue), var(--aqua), var(--violet)) border-box;
   background-size: 200% 100%, 300% 100%;
-  animation: service-gradient 12s ease-in-out infinite alternate;
+  animation: service-gradient 9s ease-in-out infinite alternate;
 }
 @keyframes service-gradient {
   from { background-position: 0% 50%, 0% 50%; }
