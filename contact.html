@@ -26,7 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/custom.css?v=naktis-3" rel="stylesheet">
+  <link href="assets/css/custom.css?v=ld11-12-1" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Personal
@@ -55,6 +55,7 @@
           <li><a href="resume.html">Patirtis</a></li>
           <li><a href="services.html">Paslaugos</a></li>
           <li><a href="portfolio.html">Darbai</a></li>
+          <li><a href="progress.html">Pažanga</a></li>
           <li><a href="contact.html" class="active">Kontaktai</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -141,35 +142,16 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
-          </div>
-        </form><!-- End Contact Form -->
+        <form id="contact-form" class="php-email-form" novalidate><div class="row gy-4">
+<div class="col-md-6"><label for="firstName">Vardas</label><input id="firstName" name="firstName" type="text" class="form-control" data-label="Vardas" aria-describedby="firstName-error" required><small id="firstName-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="lastName">Pavardė</label><input id="lastName" name="lastName" type="text" class="form-control" data-label="Pavardė" aria-describedby="lastName-error" required><small id="lastName-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="email">El. paštas</label><input id="email" name="email" type="email" class="form-control" data-label="El. paštas" aria-describedby="email-error" required><small id="email-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="phone">Telefono numeris</label><input id="phone" name="phone" type="tel" class="form-control" data-label="Telefono numeris" aria-describedby="phone-error" required inputmode="tel" maxlength="14" placeholder="+370 6xx xxxxx"><small id="phone-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="address">Adresas</label><input id="address" name="address" type="text" class="form-control" data-label="Adresas" aria-describedby="address-error" required><small id="address-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="rating1">Svetainės išvaizda (1–10)</label><input id="rating1" name="rating1" type="number" class="form-control" data-label="Svetainės išvaizda (1–10)" aria-describedby="rating1-error" required min="1" max="10" step="1"><small id="rating1-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="rating2">Turinio aiškumas (1–10)</label><input id="rating2" name="rating2" type="number" class="form-control" data-label="Turinio aiškumas (1–10)" aria-describedby="rating2-error" required min="1" max="10" step="1"><small id="rating2-error" class="field-error" aria-live="polite"></small></div>
+<div class="col-md-6"><label for="rating3">Naudojimo patogumas (1–10)</label><input id="rating3" name="rating3" type="number" class="form-control" data-label="Naudojimo patogumas (1–10)" aria-describedby="rating3-error" required min="1" max="10" step="1"><small id="rating3-error" class="field-error" aria-live="polite"></small></div>
+</div><div class="form-actions"><button type="submit" disabled>Siųsti</button><button type="reset">Išvalyti</button></div><div id="form-result" aria-live="polite"></div></form><!-- End Contact Form -->
 
       </div>
 
@@ -211,7 +193,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -224,6 +206,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script src="assets/js/custom.js?v=ld11-12-1"></script>
 </body>
 
 </html>
