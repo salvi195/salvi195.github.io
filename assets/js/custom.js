@@ -12,7 +12,7 @@ if (contactForm) {
     let error = '';
     if (!value) error = 'Užpildykite šį lauką.';
     else if (['firstName', 'lastName'].includes(field.name) && !/^\p{L}+$/u.test(value)) error = 'Naudokite tik raides.';
-    else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) error = 'Įveskite tinkamą el. paštą.';
+    else if (field.type === 'email' && (field.validity.typeMismatch || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || value.includes('..') || value.startsWith('.') || value.includes('.@'))) error = 'Įveskite tinkamą el. paštą.';
     else if (field.name === 'phone' && !/^\+370 6\d{2} \d{5}$/.test(value)) error = 'Įveskite 8 skaitmenis, prasidedančius 6.';
     else if (field.type === 'number' && (!Number.isInteger(Number(value)) || Number(value) < 1 || Number(value) > 10)) error = 'Įveskite sveiką skaičių nuo 1 iki 10.';
     return error;
@@ -154,8 +154,8 @@ if (board) {
     else if (level === 3) file = 'level-3.svg';
     else file = 'level-4.svg';
     const avatar = document.querySelector('#level-avatar');
-    avatar.src = 'assets/img/' + file + '?v=raccoon-1';
-    avatar.alt = 'Meškėnas – ' + level + ' lygis';
+    avatar.src = 'assets/img/' + file + '?v=avatar-svg-1';
+    avatar.alt = 'Avataras – ' + level + ' lygis';
   }
 
   function updateProgress() {

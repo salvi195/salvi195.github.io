@@ -370,7 +370,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 @media (max-width: 900px) { #skill-board, .achievements { grid-template-columns: 1fr; } }
 @media (max-width: 575px) { .progress-profile { flex-direction: column; align-items: stretch; } .progress-profile img { align-self: center; } }
 
-.progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; mix-blend-mode: lighten; }
+.progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; }
 
 /* Nedidelis gyvūno proporcijų personažas, centruotas šalia teksto */
 .about-intro { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; margin: 0; }
