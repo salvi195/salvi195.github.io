@@ -1,5 +1,12 @@
 /* 1-2. Spalvos ir sriftai */
 :root {
+  /* Nuotraukos spalvos */
+  --red: #f14e2f;
+  --orange: #fe9c21;
+  --blue: #30b2ff;
+  --aqua: #33e6e3;
+  --violet: #7d6b91;
+  --gold: #fdc749;
   --page-accent: #ffaf39;
   --default-font: "Segoe UI", Arial, sans-serif;
   --heading-font: Georgia, serif;
@@ -92,12 +99,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 .skills .progress { height: 72px; }
 .skills .progress-bar-wrap { height: 12px; background: #282b30; border: 1px solid #48413e; border-radius: 6px; overflow: hidden; }
 /* Įgūdžių akcentai: kailio varis ir ekrano spalvos */
-.skills .progress-bar { height: 10px; background: #ffb24a; border-radius: 5px; }
-.skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: #278cda; }
-.skills .col-lg-6:first-child .progress:nth-child(3) .progress-bar { background: #ed8243; }
-.skills .col-lg-6:last-child .progress:nth-child(1) .progress-bar { background: #46cbd4; }
-.skills .col-lg-6:last-child .progress:nth-child(2) .progress-bar { background: #d19963; }
-.skills .col-lg-6:last-child .progress:nth-child(3) .progress-bar { background: #40cbd2; }
+.skills .progress-bar { height: 10px; background: var(--gold); border-radius: 5px; }
+.skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: var(--blue); }
+.skills .col-lg-6:first-child .progress:nth-child(3) .progress-bar { background: var(--red); }
+.skills .col-lg-6:last-child .progress:nth-child(1) .progress-bar { background: var(--aqua); }
+.skills .col-lg-6:last-child .progress:nth-child(2) .progress-bar { background: var(--orange); }
+.skills .col-lg-6:last-child .progress:nth-child(3) .progress-bar { background: var(--violet); }
 
 /* Papildoma 1. Sarasu pseudo-elementai ir skaitiklis */
 #services ul, #services ol { list-style: none; padding-left: 0; }
@@ -138,8 +145,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .mobile-nav-active .navmenu { background: #121317; }
 .mobile-nav-active .mobile-nav-toggle { color: var(--heading-color); }
 .resume .resume-item h5 { background: #33271d; color: var(--heading-color); }
-.contact .info-item .icon { background: #33251c; color: #65c5ff; }
-.contact .info-item .social-links a { color: #65c5ff; }
 .contact .php-email-form input.form-control, .contact .php-email-form textarea.form-control {
   background: #111315; color: var(--default-color); border-color: #6a625d;
 }
@@ -150,10 +155,29 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* Akcentai iš kailio ir monitoriaus, antraščių spalva visur lieka vienoda */
 .hero p .typed { color: #65c5ff; border-bottom-color: #40cbd2; }
-.contact .col-md-6:nth-child(2) .icon, .hero .social-links a:nth-child(2), .footer .social-links a:nth-child(2) { color: #65c5ff; background: #162939; }
-.contact .col-md-6:nth-child(3) .icon, .hero .social-links a:nth-child(3), .footer .social-links a:nth-child(3) { color: #40cbd2; background: #142c2c; }
-.contact .col-md-6:nth-child(4) .icon, .hero .social-links a:nth-child(4), .footer .social-links a:nth-child(4) { color: #ec9962; background: #34231d; }
-.contact .col-md-6:first-child .icon { color: #ffb24a; }
+.hero .social-links a:nth-child(2), .footer .social-links a:nth-child(2) { color: #65c5ff; background: #162939; }
+.hero .social-links a:nth-child(3), .footer .social-links a:nth-child(3) { color: #40cbd2; background: #142c2c; }
+.hero .social-links a:nth-child(4), .footer .social-links a:nth-child(4) { color: #ec9962; background: #34231d; }
+/* Nepermatoma kortelių paletė – tamsus pagrindas ir vienas ryškus akcentas */
+.about .content, .resume .resume-item, .portfolio figure { background: #291b17; }
+.skills .skills-content, .resume .col-lg-6:last-child .resume-item,
+.services-page .section > .container { background-color: #132332; }
+.portfolio .col-lg-4:nth-child(2) figure { background: #132332; border-top-color: var(--blue); }
+.portfolio .col-lg-4:nth-child(3) figure { background: #241a30; border-top-color: var(--violet); }
+.portfolio figure { border-top-color: var(--red); }
+.contact .php-email-form { background: #161e30; }
+.contact .col-md-6:nth-child(1) { --card: #311e16; --detail: var(--orange); }
+.contact .col-md-6:nth-child(2) { --card: #10263d; --detail: var(--blue); }
+.contact .col-md-6:nth-child(3) { --card: #102e2c; --detail: var(--aqua); }
+.contact .col-md-6:nth-child(4) { --card: #291d33; --detail: var(--violet); }
+.contact .info-item { background: var(--card); border-color: var(--card); border-left: 3px solid var(--detail); }
+.contact .info-item .icon { color: var(--detail); background: #100f12; }
+.contact .info-item .social-links a:nth-child(1) { color: var(--red); }
+.contact .info-item .social-links a:nth-child(2) { color: var(--blue); }
+.contact .info-item .social-links a:nth-child(3) { color: var(--violet); }
+.contact .info-item .social-links a:nth-child(4) { color: var(--orange); }
+.contact .info-item .social-links a:nth-child(5) { color: var(--aqua); }
+.contact .info-item .social-links a:hover { outline: 1px solid currentColor; outline-offset: 2px; }
 .resume .col-lg-6:last-child .resume-item { border-left-color: #278cda; }
 .portfolio figure { border-top-width: 4px; }
 .hero .social-links a:hover, .footer .social-links a:hover { outline: 2px solid #ffb24a; }
