@@ -7,30 +7,27 @@
   --aqua: #33e6e3;
   --violet: #b18ae2;
   --gold: #fdc749;
-  --ink-blue: #102337;
-  --ink-plum: #162739;
-  --ink-copper: #122638;
-  --ink-teal: #102b36;
+  --panel-border: #302a24;
   --page-accent: var(--orange);
   --default-font: "Segoe UI", Arial, sans-serif;
   --heading-font: Georgia, serif;
   --nav-font: "Segoe UI", Arial, sans-serif;
   --background-color: #0b0b0d;
-  --surface-color: var(--ink-blue);
+  --surface-color: #101011;
   --default-color: #e9ddce;
   --heading-color: #ffe9ca;
   --accent-color: var(--orange);
   --contrast-color: #0b0b0d;
   --nav-color: #e9ddce;
   --nav-hover-color: var(--orange);
-  --nav-mobile-background-color: var(--ink-blue);
-  --nav-dropdown-background-color: var(--ink-blue);
+  --nav-mobile-background-color: var(--surface-color);
+  --nav-dropdown-background-color: var(--surface-color);
   --nav-dropdown-color: #e9ddce;
   --nav-dropdown-hover-color: var(--blue);
 }
 .dark-background, .light-background {
   --background-color: #0b0b0d;
-  --surface-color: var(--ink-blue);
+  --surface-color: #101011;
   --default-color: #e9ddce;
   --heading-color: #ffe9ca;
   --contrast-color: #0b0b0d;
@@ -78,9 +75,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 .contact .info-item, .contact .php-email-form {
   padding: 28px;
   background: var(--surface-color);
-  border: 1px solid #31516a;
+  border: 1px solid var(--panel-border);
   border-radius: 10px;
-  box-shadow: 0 8px 24px #00000020;
+  box-shadow: 0 8px 24px #00000050;
 }
 .about .content { margin-top: 12px; border-top: 2px solid var(--orange); }
 .about img, .portfolio img { border-radius: 6px; }
@@ -101,7 +98,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 }
 /* Progreso juostos: fonas, aukstis, krastine ir apvalumas */
 .skills .progress { height: 72px; }
-.skills .progress-bar-wrap { height: 12px; background: #071b2e; border: 1px solid #31516a; border-radius: 6px; overflow: hidden; }
+.skills .progress-bar-wrap { height: 12px; background: #08090b; border: 1px solid var(--panel-border); border-radius: 6px; overflow: hidden; }
 /* Įgūdžių akcentai: kailio varis ir ekrano spalvos */
 .skills .progress-bar { height: 10px; background: var(--gold); border-radius: 5px; }
 .skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: var(--blue); }
@@ -126,16 +123,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
   color: var(--aqua);
   text-align: center;
 }
-#services ul ul { margin-top: 12px; padding: 12px; background: #162e3c; border-left: 2px solid var(--orange); font-size: 0.95rem; }
+#services ul ul { margin-top: 12px; padding: 12px; background: var(--surface-color); border-left: 2px solid var(--orange); font-size: 0.95rem; }
 #services ul ul > li::before { content: "\2013"; color: #ffe9ca; }
 #services ul ul > li:last-child { margin-bottom: 0; }
 
 /* Papildoma 2. Lenteles antraste, zebra ir lygiavimas */
-#services .table { --bs-table-bg: var(--ink-blue); --bs-table-color: #e9ddce; --bs-table-border-color: #314554; }
+#services .table { --bs-table-bg: var(--surface-color); --bs-table-color: #e9ddce; --bs-table-border-color: var(--panel-border); }
 #services .table th, #services .table td { padding: 16px; text-align: center; vertical-align: middle; }
-#services .table thead th { background: #214256; color: var(--heading-color); font-weight: 600; }
-#services .table tbody tr:nth-child(even) > * { background: var(--ink-teal); }
-#services .table tbody tr:hover > * { background: #204351; }
+#services .table thead th { background: #201b16; color: var(--heading-color); font-weight: 600; }
+#services .table tbody tr:nth-child(even) > * { background: #181513; }
+#services .table tbody tr:hover > * { background: #252019; }
 #services .table caption { padding: 12px 0; color: var(--default-color); }
 
 
@@ -143,16 +140,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-item h4,
 .footer .sitename, .skills .progress .skill { color: var(--heading-color); }
 .glightbox-container .goverlay { background: #0b0b0d; }
-.page-title nav { background: #112b46; }
+.page-title nav { background: #0b0b0d; border-top: 1px solid var(--panel-border); border-bottom: 1px solid var(--panel-border); }
 .footer { background: #0b0b0d; }
-.footer { border-top: 1px solid #31516a; }
+.footer { border-top: 1px solid var(--panel-border); }
 .footer .copyright { border-top-color: #24486b; }
 .navmenu a.active, .navmenu a:hover { color: var(--accent-color); }
 .mobile-nav-active .navmenu { background: #0b0b0d; }
 .mobile-nav-active .mobile-nav-toggle { color: var(--heading-color); }
-.resume .resume-item h5 { background: #1a3546; color: var(--heading-color); }
+.resume .resume-item h5 { background: #201b16; color: var(--heading-color); }
 .contact .php-email-form input.form-control, .contact .php-email-form textarea.form-control {
-  background: #091f34; color: var(--default-color); border-color: #416681;
+  background: var(--surface-color); color: var(--default-color); border-color: var(--panel-border);
 }
 .contact .php-email-form :is(input, textarea).form-control::placeholder { color: #c1b6ab; }
 .contact .php-email-form .form-control:focus { border-color: var(--aqua); }
@@ -168,32 +165,32 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 }
 .hero p .typed { color: var(--blue); border-bottom-color: var(--aqua); }
 /* Nepermatoma kortelių paletė – tamsus pagrindas ir vienas ryškus akcentas */
-.about .content, .resume .resume-item, .portfolio figure { background: var(--ink-copper); border-color: #714124; }
+.about .content, .resume .resume-item, .portfolio figure { background: var(--surface-color); border-color: var(--panel-border); }
 .about .content { border-top-color: var(--orange); }
 .resume .resume-item { border-left-color: var(--red); }
-.skills .skills-content { border-color: #275d85; }
-.services-page .section > .container { border-color: #275d85; }
-.services-page .section:last-child > .container { border-color: #634182; }
-.contact .php-email-form { border-color: #275d85; }
-.portfolio .col-lg-4:nth-child(2) figure { border-color: #275d85; }
-.portfolio .col-lg-4:nth-child(3) figure { border-color: #634182; }
-.resume .col-lg-6:last-child .resume-item { border-color: #275d85; }
-.resume .col-lg-6:first-child .resume-item:last-child { border-color: #634182; }
+.skills .skills-content { border-color: var(--panel-border); }
+.services-page .section > .container { border-color: var(--panel-border); }
+.services-page .section:last-child > .container { border-color: var(--panel-border); }
+.contact .php-email-form { border-color: var(--panel-border); }
+.portfolio .col-lg-4:nth-child(2) figure { border-color: var(--panel-border); }
+.portfolio .col-lg-4:nth-child(3) figure { border-color: var(--panel-border); }
+.resume .col-lg-6:last-child .resume-item { border-color: var(--panel-border); }
+.resume .col-lg-6:first-child .resume-item:last-child { border-color: var(--panel-border); }
 .skills .skills-content, .resume .col-lg-6:last-child .resume-item,
-.services-page .section > .container { background-color: var(--ink-blue); }
-.portfolio .col-lg-4:nth-child(2) figure { background: var(--ink-blue); border-top-color: var(--blue); }
-.portfolio .col-lg-4:nth-child(3) figure { background: var(--ink-plum); border-top-color: var(--violet); }
+.services-page .section > .container { background-color: var(--surface-color); }
+.portfolio .col-lg-4:nth-child(2) figure { background: var(--surface-color); border-top-color: var(--blue); }
+.portfolio .col-lg-4:nth-child(3) figure { background: var(--surface-color); border-top-color: var(--violet); }
 .portfolio figure { border-top-color: var(--red); }
-.contact .php-email-form { background: var(--ink-blue); }
-.resume .col-lg-6:first-child .resume-item:last-child { background: var(--ink-plum); }
-.services-page .section:last-child > .container { background: var(--ink-plum); }
-.glightbox-clean .gslide-description { background: var(--ink-blue); }
+.contact .php-email-form { background: var(--surface-color); }
+.resume .col-lg-6:first-child .resume-item:last-child { background: var(--surface-color); }
+.services-page .section:last-child > .container { background: var(--surface-color); }
+.glightbox-clean .gslide-description { background: var(--surface-color); }
 .glightbox-clean .gslide-description .gslide-title { color: var(--heading-color); }
-.contact .col-md-6:nth-child(1) { --card: var(--ink-copper); --detail: var(--orange); }
-.contact .col-md-6:nth-child(2) { --card: var(--ink-blue); --detail: var(--blue); }
-.contact .col-md-6:nth-child(3) { --card: var(--ink-teal); --detail: var(--aqua); }
-.contact .col-md-6:nth-child(4) { --card: var(--ink-plum); --detail: var(--violet); }
-.contact .info-item { background: var(--card); border-color: var(--card); border-left: 3px solid var(--detail); }
+.contact .col-md-6:nth-child(1) { --detail: var(--orange); }
+.contact .col-md-6:nth-child(2) { --detail: var(--blue); }
+.contact .col-md-6:nth-child(3) { --detail: var(--aqua); }
+.contact .col-md-6:nth-child(4) { --detail: var(--violet); }
+.contact .info-item { background: var(--surface-color); border-color: var(--panel-border); border-left: 2px solid var(--detail); }
 .contact .info-item .icon { color: var(--detail); background: #0b0b0d; border: 1px solid var(--detail); }
 .contact .info-item .social-links a { color: var(--detail); }
 .contact .info-item .social-links a:hover { outline: 1px solid currentColor; outline-offset: 2px; }
@@ -208,7 +205,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .hero .social-links a:nth-child(5), .footer .social-links a:nth-child(5),
 .contact .info-item .social-links a:nth-child(5) { --detail: var(--violet); }
 .resume .col-lg-6:last-child .resume-item { border-left-color: var(--blue); }
-.portfolio figure { border-top-width: 4px; }
+.portfolio figure { border-top-width: 2px; }
 .hero .social-links a:focus-visible, .footer .social-links a:focus-visible { outline-color: var(--detail); }
 
 /* Vardas ant juodo fono, nuotrauka šalia jo */
@@ -249,7 +246,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* Tamsūs vietinių medijų valdikliai */
 .services-page audio, .services-page video { color-scheme: dark; background: #0b0b0d; }
-.services-page audio::-webkit-media-controls-panel { background: var(--ink-blue); }
+.services-page audio::-webkit-media-controls-panel { background: var(--surface-color); }
 
 /* Pagrindinio puslapio socialinės ikonos */
 .hero .social-links a:is(:hover, :focus-visible) i {
@@ -279,7 +276,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* Papildoma: judantis paslaugų bloko fonas */
 #services > .container {
-  background: linear-gradient(110deg, #0e2135, #16383f, #1d2b40);
+  background: linear-gradient(110deg, #0b0b0d, #171310, #0c1419);
   background-size: 240% 100%;
   animation: service-gradient 12s ease-in-out infinite alternate;
 }
@@ -328,37 +325,37 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .contact .php-email-form [aria-invalid="true"] { border: 1px solid #f14e2f; }
 .form-actions { display: flex; gap: 16px; margin-top: 20px; }
 .form-actions button, .skill-card select { padding: 10px 18px; border-radius: 6px; }
-.form-actions button[type="reset"] { background: #102337; color: #ffe9ca; border: 1px solid #30b2ff; }
-.contact .php-email-form button[type="submit"]:disabled { background: #172b3a; color: #b4c5cf; border-color: #31516a; cursor: not-allowed; }
-#form-result:not(:empty) { margin-top: 28px; padding-top: 24px; border-top: 1px solid #31516a; overflow-wrap: anywhere; }
+.form-actions button[type="reset"] { background: var(--surface-color); color: #ffe9ca; border: 1px solid #30b2ff; }
+.contact .php-email-form button[type="submit"]:disabled { background: var(--surface-color); color: #b4c5cf; border-color: var(--panel-border); cursor: not-allowed; }
+#form-result:not(:empty) { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--panel-border); overflow-wrap: anywhere; }
 #form-result p { margin-bottom: 8px; }
 .rating-average { color: var(--aqua); }
 
 /* LD12: įgūdžių lenta */
-.progress-profile, .skill-column, .achievement { background: #102337; border: 1px solid #28465a; border-radius: 10px; padding: 24px; }
+.progress-profile, .skill-column, .achievement { background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 10px; padding: 24px; }
 .progress-profile { display: flex; gap: 28px; align-items: center; }
 .progress-details { flex: 1; }
 .progress-details p { margin: 8px 0; }
 #xp-total { color: var(--gold); font-size: 1.3rem; }
-#xp-bar { display: block; width: 100%; height: 16px; margin: 12px 0; accent-color: var(--aqua); border: 0; border-radius: 8px; overflow: hidden; background: #071b2e; }
-#xp-bar::-webkit-progress-bar { background: #071b2e; }
+#xp-bar { display: block; width: 100%; height: 16px; margin: 12px 0; accent-color: var(--aqua); border: 0; border-radius: 8px; overflow: hidden; background: #08090b; }
+#xp-bar::-webkit-progress-bar { background: #08090b; }
 #xp-bar::-webkit-progress-value { background: var(--aqua); }
 #xp-bar::-moz-progress-bar { background: var(--aqua); }
 .board-heading { margin: 36px 0 22px; }
 #skill-board, .achievements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .skill-column { padding: 18px; overflow: visible; }
-.skill-column:nth-child(1) { border-top: 3px solid var(--orange); }
-.skill-column:nth-child(2) { border-top: 3px solid var(--blue); }
-.skill-column:nth-child(3) { border-top: 3px solid var(--aqua); }
+.skill-column:nth-child(1) { border-top: 2px solid var(--orange); }
+.skill-column:nth-child(2) { border-top: 2px solid var(--blue); }
+.skill-column:nth-child(3) { border-top: 2px solid var(--aqua); }
 .skill-column h3 { font-size: 1.4rem; margin-bottom: 24px; }
-.skill-card { padding: 18px; margin-bottom: 14px; background: #0b1827; border: 1px solid #28465a; border-radius: 8px; }
+.skill-card { padding: 18px; margin-bottom: 14px; background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 8px; }
 .skill-card h4 { font-size: 1.1rem; }
 .skill-card p { margin-bottom: 12px; color: var(--gold); }
-.skill-card select { width: 100%; background: #142f42; color: #ffe9ca; border: 1px solid #416681; }
+.skill-card select { width: 100%; background: var(--surface-color); color: #ffe9ca; border: 1px solid var(--panel-border); }
 .skill-card select:focus { outline: 2px solid var(--blue); }
 .achievement h3 { font-size: 1.3rem; }
 .achievement span { color: #b4c5cf; }
-.achievement.unlocked { border-color: var(--aqua); background: #0e3037; }
+.achievement.unlocked { border-color: var(--aqua); }
 .achievement.unlocked span { color: var(--aqua); }
 .avatar-credit { margin-top: 28px; font-size: 0.9rem; }
 @media (max-width: 900px) { #skill-board, .achievements { grid-template-columns: 1fr; } }
