@@ -1,28 +1,28 @@
 /* 1-2. Spalvos ir sriftai */
 :root {
-  --page-accent: #ac673f;
+  --page-accent: #ffaf39;
   --default-font: "Segoe UI", Arial, sans-serif;
   --heading-font: Georgia, serif;
   --nav-font: "Segoe UI", Arial, sans-serif;
-  --background-color: #f2e7d9;
-  --surface-color: #fff6e8;
-  --default-color: #443329;
-  --heading-color: #35271f;
-  --accent-color: #8c481f;
-  --contrast-color: #fff6e8;
-  --nav-color: #443329;
-  --nav-hover-color: #35271f;
-  --nav-mobile-background-color: #fff6e8;
-  --nav-dropdown-background-color: #fff6e8;
-  --nav-dropdown-color: #443329;
-  --nav-dropdown-hover-color: #35271f;
+  --background-color: #0b0b0d;
+  --surface-color: #191b1e;
+  --default-color: #e9ddce;
+  --heading-color: #ffe9ca;
+  --accent-color: #ffb24a;
+  --contrast-color: #191b1e;
+  --nav-color: #e9ddce;
+  --nav-hover-color: #ffe9ca;
+  --nav-mobile-background-color: #191b1e;
+  --nav-dropdown-background-color: #191b1e;
+  --nav-dropdown-color: #e9ddce;
+  --nav-dropdown-hover-color: #ffe9ca;
 }
 .dark-background, .light-background {
-  --background-color: #f2e7d9;
-  --surface-color: #fff6e8;
-  --default-color: #443329;
-  --heading-color: #35271f;
-  --contrast-color: #fff6e8;
+  --background-color: #0b0b0d;
+  --surface-color: #191b1e;
+  --default-color: #e9ddce;
+  --heading-color: #ffe9ca;
+  --contrast-color: #191b1e;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
@@ -45,20 +45,20 @@ p { font-size: 1.05rem; line-height: 1.85; color: var(--default-color); margin-b
 .contact .info-item p { font-size: 1.05rem; color: var(--default-color); }
 
 /* 3. Mygtukai ir nuorodos */
-.main p a { color: #78401f; text-decoration: underline; text-underline-offset: 4px; }
-a:hover, .main p a:hover { color: #35271f; }
-a:active { color: #884d30; }
-a:focus-visible, button:focus-visible { outline: 2px solid #35271f; outline-offset: 4px; }
+.main p a { color: #65c5ff; text-decoration: underline; text-underline-offset: 4px; }
+a:hover, .main p a:hover { color: #ffe9ca; }
+a:active { color: #ec9962; }
+a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offset: 4px; }
 .contact .php-email-form button[type=submit], .scroll-top {
-  background: #8c481f;
-  color: #f2e7d9;
-  border: 1px solid #d49a5c;
+  background: #ffb24a;
+  color: #0b0b0d;
+  border: 1px solid #efb875;
   border-radius: 6px;
   box-shadow: 0 3px 10px #00000025;
 }
 .contact .php-email-form button[type=submit] { padding: 12px 30px; }
-.contact .php-email-form button[type=submit]:hover, .scroll-top:hover { background: #643a25; color: #fff6e8; }
-.contact .php-email-form button[type=submit]:active, .scroll-top:active { background: #643a25; transform: translateY(2px); }
+.contact .php-email-form button[type=submit]:hover, .scroll-top:hover { background: #ffcf83; color: #191b1e; }
+.contact .php-email-form button[type=submit]:active, .scroll-top:active { background: #ffcf83; transform: translateY(2px); }
 
 /* 4. Tarpai ir turinio blokai */
 .about, .resume, .portfolio { padding: 48px 0; margin-bottom: 24px; }
@@ -67,42 +67,42 @@ a:focus-visible, button:focus-visible { outline: 2px solid #35271f; outline-offs
 .contact .info-item, .contact .php-email-form {
   padding: 28px;
   background: var(--surface-color);
-  border: 1px solid #cdbba6;
+  border: 1px solid #48413e;
   border-radius: 10px;
   box-shadow: 0 8px 24px #00000020;
 }
-.about .content { margin-top: 12px; border-top: 2px solid #8c481f; }
+.about .content { margin-top: 12px; border-top: 2px solid #ffb24a; }
 .about img, .portfolio img { border-radius: 6px; }
-.resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid #884d30; }
+.resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid #ec9962; }
 .resume .resume-item:last-child { padding-bottom: 28px; }
-.portfolio figure { height: 100%; margin: 0; padding: 20px; border-top: 2px solid #aa5c39; }
-.portfolio .col-lg-4:nth-child(2) figure { border-top-color: #78401f; }
-.portfolio .col-lg-4:nth-child(3) figure { border-top-color: #795d4f; }
+.portfolio figure { height: 100%; margin: 0; padding: 20px; border-top: 2px solid #ed8243; }
+.portfolio .col-lg-4:nth-child(2) figure { border-top-color: #65c5ff; }
+.portfolio .col-lg-4:nth-child(3) figure { border-top-color: #40cbd2; }
 .services-page .section > .container { width: calc(100% - 24px); }
 .contact .php-email-form { margin-top: 28px; }
 
 /* 5. Navigacijos juosta: fonas, krastine, seselis, tarpai */
 .header, .scrolled .header {
-  background: #fff6e8;
-  border-bottom: 1px solid #b99470;
+  background: #191b1e;
+  border-bottom: 1px solid #655043;
   box-shadow: 0 4px 16px #00000030;
   padding: 14px 0;
 }
 /* Progreso juostos: fonas, aukstis, krastine ir apvalumas */
 .skills .progress { height: 72px; }
-.skills .progress-bar-wrap { height: 12px; background: #e8d9c8; border: 1px solid #cdbba6; border-radius: 6px; overflow: hidden; }
-/* Įgūdžių akcentai: varis, karamelė ir kailio rusvi tonai */
-.skills .progress-bar { height: 10px; background: #8c481f; border-radius: 5px; }
-.skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: #945535; }
-.skills .col-lg-6:first-child .progress:nth-child(3) .progress-bar { background: #aa5c39; }
-.skills .col-lg-6:last-child .progress:nth-child(1) .progress-bar { background: #cf935b; }
-.skills .col-lg-6:last-child .progress:nth-child(2) .progress-bar { background: #8c6956; }
-.skills .col-lg-6:last-child .progress:nth-child(3) .progress-bar { background: #795d4f; }
+.skills .progress-bar-wrap { height: 12px; background: #282b30; border: 1px solid #48413e; border-radius: 6px; overflow: hidden; }
+/* Įgūdžių akcentai: kailio varis ir ekrano spalvos */
+.skills .progress-bar { height: 10px; background: #ffb24a; border-radius: 5px; }
+.skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: #278cda; }
+.skills .col-lg-6:first-child .progress:nth-child(3) .progress-bar { background: #ed8243; }
+.skills .col-lg-6:last-child .progress:nth-child(1) .progress-bar { background: #46cbd4; }
+.skills .col-lg-6:last-child .progress:nth-child(2) .progress-bar { background: #d19963; }
+.skills .col-lg-6:last-child .progress:nth-child(3) .progress-bar { background: #40cbd2; }
 
 /* Papildoma 1. Sarasu pseudo-elementai ir skaitiklis */
 #services ul, #services ol { list-style: none; padding-left: 0; }
 #services li { position: relative; padding-left: 28px; margin-bottom: 14px; line-height: 1.75; }
-#services ul > li::before { content: "\2022"; position: absolute; left: 6px; color: #8c481f; }
+#services ul > li::before { content: "\2022"; position: absolute; left: 6px; color: #ffb24a; }
 #services ol { counter-reset: etapas; }
 #services ol > li { counter-increment: etapas; padding-left: 40px; }
 #services ol > li::before {
@@ -110,45 +110,55 @@ a:focus-visible, button:focus-visible { outline: 2px solid #35271f; outline-offs
   position: absolute;
   left: 0;
   width: 28px;
-  border: 1px solid #78401f;
+  border: 1px solid #65c5ff;
   border-radius: 5px;
-  color: #78401f;
+  color: #65c5ff;
   text-align: center;
 }
-#services ul ul { margin-top: 12px; padding: 12px; background: #edddc9; border-left: 2px solid #8c481f; font-size: 0.95rem; }
-#services ul ul > li::before { content: "\2013"; color: #35271f; }
+#services ul ul { margin-top: 12px; padding: 12px; background: #2b231e; border-left: 2px solid #ffb24a; font-size: 0.95rem; }
+#services ul ul > li::before { content: "\2013"; color: #ffe9ca; }
 #services ul ul > li:last-child { margin-bottom: 0; }
 
 /* Papildoma 2. Lenteles antraste, zebra ir lygiavimas */
-#services .table { --bs-table-bg: #fff6e8; --bs-table-color: #443329; --bs-table-border-color: #cdbba6; }
+#services .table { --bs-table-bg: #191b1e; --bs-table-color: #e9ddce; --bs-table-border-color: #48413e; }
 #services .table th, #services .table td { padding: 16px; text-align: center; vertical-align: middle; }
-#services .table thead th { background: #e1c4a3; color: var(--heading-color); font-weight: 600; }
-#services .table tbody tr:nth-child(even) > * { background: #f2e6d6; }
-#services .table tbody tr:hover > * { background: #e8d2b7; }
+#services .table thead th { background: #543321; color: var(--heading-color); font-weight: 600; }
+#services .table tbody tr:nth-child(even) > * { background: #232a31; }
+#services .table tbody tr:hover > * { background: #34302b; }
 #services .table caption { padding: 12px 0; color: var(--default-color); }
 
 
-/* Viena antraščių spalva, nepermatomi kreminiai paviršiai */
+/* Viena antraščių spalva, nepermatomi tamsūs paviršiai */
 main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-item h4,
 .footer .sitename, .skills .progress .skill { color: var(--heading-color); }
-.glightbox-container .goverlay { background: #35271f; }
-.page-title nav, .footer { background: #eaddcc; }
-.footer { border-top: 1px solid #cdbba6; }
+.glightbox-container .goverlay { background: #0b0b0d; }
+.page-title nav, .footer { background: #121317; }
+.footer { border-top: 1px solid #48413e; }
 .navmenu a.active, .navmenu a:hover { color: var(--accent-color); }
-.mobile-nav-active .navmenu { background: #eaddcc; }
+.mobile-nav-active .navmenu { background: #121317; }
 .mobile-nav-active .mobile-nav-toggle { color: var(--heading-color); }
-.resume .resume-item h5 { background: #ecd8bc; color: var(--heading-color); }
-.contact .info-item .icon { background: #f0d9ba; color: #78401f; }
-.contact .info-item .social-links a { color: #78401f; }
+.resume .resume-item h5 { background: #33271d; color: var(--heading-color); }
+.contact .info-item .icon { background: #33251c; color: #65c5ff; }
+.contact .info-item .social-links a { color: #65c5ff; }
 .contact .php-email-form input.form-control, .contact .php-email-form textarea.form-control {
-  background: #fffbf4; color: var(--default-color); border-color: #a99178;
+  background: #111315; color: var(--default-color); border-color: #6a625d;
 }
-.contact .php-email-form :is(input, textarea).form-control::placeholder { color: #716052; }
-.contact .php-email-form .form-control:focus { border-color: #8c481f; }
-.hero .social-links a, .footer .social-links a { background: #e6caa7; color: #533324; }
-.hero .social-links a:hover, .footer .social-links a:hover { background: #78401f; color: #fff6e8; }
+.contact .php-email-form :is(input, textarea).form-control::placeholder { color: #c1b6ab; }
+.contact .php-email-form .form-control:focus { border-color: #ffb24a; }
+.hero .social-links a, .footer .social-links a { background: #28232a; color: #ffd288; }
+.hero .social-links a:hover, .footer .social-links a:hover { background: #65c5ff; color: #191b1e; }
 
-/* Vardas ant kreminio fono, nuotrauka šalia jo */
+/* Akcentai iš kailio ir monitoriaus, antraščių spalva visur lieka vienoda */
+.hero p .typed { color: #65c5ff; border-bottom-color: #40cbd2; }
+.contact .col-md-6:nth-child(2) .icon, .hero .social-links a:nth-child(2), .footer .social-links a:nth-child(2) { color: #65c5ff; background: #162939; }
+.contact .col-md-6:nth-child(3) .icon, .hero .social-links a:nth-child(3), .footer .social-links a:nth-child(3) { color: #40cbd2; background: #142c2c; }
+.contact .col-md-6:nth-child(4) .icon, .hero .social-links a:nth-child(4), .footer .social-links a:nth-child(4) { color: #ec9962; background: #34231d; }
+.contact .col-md-6:first-child .icon { color: #ffb24a; }
+.resume .col-lg-6:last-child .resume-item { border-left-color: #278cda; }
+.portfolio figure { border-top-width: 4px; }
+.hero .social-links a:hover, .footer .social-links a:hover { outline: 2px solid #ffb24a; }
+
+/* Vardas ant juodo fono, nuotrauka šalia jo */
 .hero { justify-content: flex-start; }
 .hero img { left: auto; right: 0; width: 54%; object-position: right center; }
 .hero .container { width: 46%; margin: 0; padding-inline: clamp(20px, 4vw, 72px); }
@@ -200,9 +210,9 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   width: 0.6em;
   height: 0.6em;
   margin-left: 0.4em;
-  border: 2px solid #cbb99f;
-  border-top-color: #945535;
-  border-right-color: #cb9052;
+  border: 2px solid #57504a;
+  border-top-color: #278cda;
+  border-right-color: #ffc35c;
   border-radius: 50%;
   animation: ring-turn 1.6s linear infinite;
 }
@@ -212,7 +222,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* Papildoma: judantis paslaugų bloko fonas */
 #services > .container {
-  background: linear-gradient(110deg, #fff5e6, #eedac3, #f7ead9);
+  background: linear-gradient(110deg, #1f1917, #181d25, #172426);
   background-size: 240% 100%;
   animation: service-gradient 12s ease-in-out infinite alternate;
 }
@@ -229,12 +239,12 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   height: 8px;
   margin: 0 6px;
   vertical-align: middle;
-  background: #9f5837;
+  background: #42ccd0;
   border-radius: 50%;
   animation: shape-float 3s ease-in-out infinite alternate;
 }
 .about .content h2::after {
-  background: #cb9052;
+  background: #ffc35c;
   border-radius: 0;
   rotate: 45deg;
   animation-direction: alternate-reverse;
