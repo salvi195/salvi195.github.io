@@ -213,3 +213,93 @@ body { --page-accent: #ffc66a; }
 .contact .info-item .social-links a:hover { color: #57d0d5; }
 .contact .php-email-form input, .contact .php-email-form textarea { background: #151b22; border-color: #43566b; color: #efdbc1; }
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus { border-color: #21b5bf; }
+
+
+/* LD10: dekoratyviniai antraščių brūkšneliai */
+:is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::before,
+:is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 2px;
+  margin: 0 0.2em;
+  vertical-align: middle;
+  background: var(--page-accent);
+  animation: heading-pulse 4s ease-in-out infinite;
+}
+@keyframes heading-pulse {
+  0%   { transform: scaleX(0.6); opacity: 0.55; }
+  30%  { transform: scaleX(1);   opacity: 1; }
+  60%  { transform: scaleX(0.8); opacity: 0.75; }
+  100% { transform: scaleX(0.6); opacity: 0.55; }
+}
+
+/* Pagrindinio puslapio socialinės ikonos */
+.hero .social-links a:is(:hover, :focus-visible) i {
+  display: inline-block;
+  animation: icon-lift 0.5s ease-in-out;
+}
+@keyframes icon-lift {
+  50% { transform: translateY(-3px); }
+}
+
+/* Paslaugos: dekoratyvinis krovimo žiedas */
+#services > .container > h2::after {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border: 2px solid #43566b;
+  border-top-color: #55b8f5;
+  border-right-color: #ffc66a;
+  border-radius: 50%;
+  animation: ring-turn 1.6s linear infinite;
+}
+@keyframes ring-turn {
+  to { transform: rotate(360deg); }
+}
+
+/* Papildoma: judantis paslaugų bloko fonas */
+#services > .container {
+  background: linear-gradient(110deg, #302720, #1d3042, #173239);
+  background-size: 240% 100%;
+  animation: service-gradient 12s ease-in-out infinite alternate;
+}
+@keyframes service-gradient {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+/* Papildoma: apskritimas ir rombas prie aprašymo */
+.about .content h2::before, .about .content h2::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 6px;
+  vertical-align: middle;
+  background: #57d0d5;
+  border-radius: 50%;
+  animation: shape-float 3s ease-in-out infinite alternate;
+}
+.about .content h2::after {
+  background: #ffc66a;
+  border-radius: 0;
+  rotate: 45deg;
+  animation-direction: alternate-reverse;
+}
+@keyframes shape-float {
+  from { transform: translateY(-2px); }
+  to   { transform: translateY(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::before,
+  :is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::after,
+  .hero .social-links a:is(:hover, :focus-visible) i,
+  #services > .container, #services > .container > h2::after,
+  .about .content h2::before, .about .content h2::after {
+    animation: none;
+  }
+}
