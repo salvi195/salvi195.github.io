@@ -283,13 +283,15 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* Papildoma: judantis paslaugų bloko fonas */
 #services > .container {
-  background: linear-gradient(120deg, #0b0b0d 0%, #0b1722 35%, #152936 55%, #0d121a 75%, #0b0b0d 100%);
-  background-size: 200% 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(120deg, #0b0b0d, #11100e, #0b0e12) padding-box,
+              linear-gradient(120deg, var(--orange), var(--blue), var(--aqua), var(--violet)) border-box;
+  background-size: 200% 100%, 300% 100%;
   animation: service-gradient 12s ease-in-out infinite alternate;
 }
 @keyframes service-gradient {
-  from { background-position: 0% 50%; }
-  to   { background-position: 100% 50%; }
+  from { background-position: 0% 50%, 0% 50%; }
+  to   { background-position: 100% 50%, 100% 50%; }
 }
 
 /* Papildoma: apskritimas ir rombas prie aprašymo */
@@ -340,7 +342,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* LD12: įgūdžių lenta */
 .progress-profile, .skill-column, .achievement { background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 10px; padding: 24px; }
-.progress-profile { border-color: var(--divider-color); display: flex; gap: 28px; align-items: center; }
+.progress-profile { border-color: var(--orange); display: flex; gap: 28px; align-items: center; }
 .progress-details { flex: 1; }
 .progress-details p { margin: 8px 0; }
 #xp-total { color: var(--gold); font-size: 1.3rem; }
@@ -351,9 +353,9 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .board-heading { margin: 36px 0 22px; }
 #skill-board, .achievements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .skill-column { padding: 18px; overflow: visible; }
-.skill-column:nth-child(1) { border-top: 2px solid var(--gold); }
-.skill-column:nth-child(2) { border-top: 2px solid var(--gold); }
-.skill-column:nth-child(3) { border-top: 2px solid var(--gold); }
+.skill-column:nth-child(1) { border-color: var(--orange); }
+.skill-column:nth-child(2) { border-color: var(--blue); }
+.skill-column:nth-child(3) { border-color: var(--aqua); }
 .skill-column h3 { font-size: 1.4rem; margin-bottom: 24px; }
 .skill-card { padding: 18px; margin-bottom: 14px; background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 8px; }
 .skill-card h4 { font-size: 1.1rem; }
@@ -368,19 +370,14 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 @media (max-width: 900px) { #skill-board, .achievements { grid-template-columns: 1fr; } }
 @media (max-width: 575px) { .progress-profile { flex-direction: column; align-items: stretch; } .progress-profile img { align-self: center; } }
 
-.progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; border-radius: 8px; }
+.progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; mix-blend-mode: lighten; }
 
-/* Pilno ūgio personažas prie tikro informacijos bloko */
-.about-portrait img { display: block; width: 100%; height: auto; object-fit: contain; }
-@media (min-width: 992px) {
-  .about-intro { --portrait-width: clamp(300px, 28vw, 400px); display: grid; grid-template-columns: calc(var(--portrait-width) * 0.85) minmax(0, 1fr); margin: 0; }
-  .about-intro > .about-portrait { width: auto; padding: 0; position: relative; z-index: 1; }
-  .about-portrait img { width: var(--portrait-width); max-width: none; }
-  .about-intro > .content { width: auto; margin-top: calc(var(--portrait-width) * 0.56); }
-}
+/* Nedidelis gyvūno proporcijų personažas, centruotas šalia teksto */
+.about-intro { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; margin: 0; }
+.about-intro > .about-portrait { width: auto; padding: 0; position: relative; z-index: 1; }
+.about-portrait img { display: block; width: 260px; max-width: none; height: auto; object-fit: contain; }
+.about-intro > .content { width: auto; margin-top: 0; }
 @media (max-width: 991px) {
-  .about-intro { --portrait-width: min(300px, 80vw); }
-  .about-portrait { position: relative; z-index: 1; }
-  .about-portrait img { width: var(--portrait-width); max-width: none; margin-inline: auto; }
-  .about-intro > .content { margin-top: calc(var(--portrait-width) * -0.94); padding-top: calc(var(--portrait-width) * 1.04); }
+  .about-intro { grid-template-columns: 1fr; gap: 20px; }
+  .about-portrait img { width: 220px; margin-inline: auto; }
 }
