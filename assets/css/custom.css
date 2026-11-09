@@ -7,7 +7,7 @@
   --aqua: #33e6e3;
   --violet: #b18ae2;
   --gold: #fdc749;
-  --divider-color: #6d421b;
+  --divider-color: #3c3022;
   --panel-border: #302a24;
   --page-accent: var(--orange);
   --default-font: "Segoe UI", Arial, sans-serif;
@@ -82,7 +82,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 }
 .about .content { margin-top: 12px; border-top: 2px solid var(--gold); }
 .about img, .portfolio img { border-radius: 6px; }
-.resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid var(--red); }
+.resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid var(--detail); }
 .resume .resume-item:last-child { padding-bottom: 28px; }
 .portfolio figure { height: 100%; margin: 0; padding: 20px; border-top: 2px solid var(--red); }
 .portfolio .col-lg-4:nth-child(2) figure { border-top-color: var(--blue); }
@@ -168,15 +168,15 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 /* Nepermatoma kortelių paletė – tamsus pagrindas ir vienas ryškus akcentas */
 .about .content, .resume .resume-item, .portfolio figure { background: var(--surface-color); border-color: var(--panel-border); }
 .about .content { border-top-color: var(--orange); }
-.resume .resume-item { border-left-color: var(--red); }
+.resume .resume-item { border-left-color: var(--detail); }
 .skills .skills-content { border-color: var(--panel-border); }
 .services-page .section > .container { border-color: var(--panel-border); }
 .services-page .section:last-child > .container { border-color: var(--panel-border); }
 .contact .php-email-form { border-color: var(--panel-border); }
 .portfolio .col-lg-4:nth-child(2) figure { border-color: var(--panel-border); }
 .portfolio .col-lg-4:nth-child(3) figure { border-color: var(--panel-border); }
-.resume .col-lg-6:last-child .resume-item { border-color: var(--panel-border); }
-.resume .col-lg-6:first-child .resume-item:last-child { border-color: var(--panel-border); }
+.resume .col-lg-6:last-child .resume-item { border-left-color: var(--detail); }
+.resume .col-lg-6:first-child .resume-item:last-child { border-left-color: var(--detail); }
 .skills .skills-content, .resume .col-lg-6:last-child .resume-item,
 .services-page .section > .container { background-color: var(--surface-color); }
 .portfolio .col-lg-4:nth-child(2) figure { background: var(--surface-color); border-top-color: var(--blue); }
@@ -205,7 +205,13 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .contact .info-item .social-links a:nth-child(4) { --detail: var(--aqua); }
 .hero .social-links a:nth-child(5), .footer .social-links a:nth-child(5),
 .contact .info-item .social-links a:nth-child(5) { --detail: var(--violet); }
-.resume .col-lg-6:last-child .resume-item { border-left-color: var(--blue); }
+/* Kiekvienas patirties įrašas turi vieną atskirą akcentą */
+.resume .col-lg-6:first-child .resume-item { --detail: var(--red); }
+.resume .col-lg-6:first-child .resume-item:last-child { --detail: var(--violet); }
+.resume .col-lg-6:last-child .resume-item { --detail: var(--blue); }
+.resume .col-lg-6:last-child .resume-item:last-child { --detail: var(--aqua); }
+.resume .col-lg-6 .resume-item { border-left-color: var(--detail); }
+.resume .resume-item::before { border-color: var(--detail); }
 .portfolio figure { border-top-width: 2px; }
 .hero .social-links a:focus-visible, .footer .social-links a:focus-visible { outline-color: var(--detail); }
 
@@ -277,8 +283,8 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* Papildoma: judantis paslaugų bloko fonas */
 #services > .container {
-  background: linear-gradient(110deg, #0b0b0d, #171310, #0c1419);
-  background-size: 240% 100%;
+  background: linear-gradient(120deg, #0b0b0d 0%, #0b1722 35%, #152936 55%, #0d121a 75%, #0b0b0d 100%);
+  background-size: 200% 100%;
   animation: service-gradient 12s ease-in-out infinite alternate;
 }
 @keyframes service-gradient {
@@ -363,3 +369,18 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 @media (max-width: 575px) { .progress-profile { flex-direction: column; align-items: stretch; } .progress-profile img { align-self: center; } }
 
 .progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; border-radius: 8px; }
+
+/* Pilno ūgio personažas prie tikro informacijos bloko */
+.about-portrait img { display: block; width: 100%; height: auto; object-fit: contain; }
+@media (min-width: 992px) {
+  .about-intro { --portrait-width: clamp(300px, 28vw, 400px); display: grid; grid-template-columns: calc(var(--portrait-width) * 0.85) minmax(0, 1fr); margin: 0; }
+  .about-intro > .about-portrait { width: auto; padding: 0; position: relative; z-index: 1; }
+  .about-portrait img { width: var(--portrait-width); max-width: none; }
+  .about-intro > .content { width: auto; margin-top: calc(var(--portrait-width) * 0.56); }
+}
+@media (max-width: 991px) {
+  .about-intro { --portrait-width: min(300px, 80vw); }
+  .about-portrait { position: relative; z-index: 1; }
+  .about-portrait img { width: var(--portrait-width); max-width: none; margin-inline: auto; }
+  .about-intro > .content { margin-top: calc(var(--portrait-width) * -0.94); padding-top: calc(var(--portrait-width) * 1.04); }
+}
