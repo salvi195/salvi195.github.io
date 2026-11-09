@@ -304,7 +304,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   vertical-align: middle;
   background: var(--aqua);
   border-radius: 50%;
-  animation: shape-float 3s ease-in-out infinite alternate;
+  animation: shape-float 1.8s ease-in-out infinite alternate;
 }
 .about .content h2::after {
   background: var(--orange);
@@ -313,8 +313,8 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   animation-direction: alternate-reverse;
 }
 @keyframes shape-float {
-  from { transform: translateY(-2px); }
-  to   { transform: translateY(2px); }
+  from { transform: translateY(-6px) scale(0.9); }
+  to   { transform: translateY(6px) scale(1.2); }
 }
 
 @media (prefers-reduced-motion: reduce) {
