@@ -119,6 +119,7 @@ if (board) {
         if (skill.status !== state) return;
         const card = document.createElement('article');
         card.className = 'skill-card';
+        card.dataset.color = index;
         const heading = document.createElement('h4');
         heading.textContent = skill.name;
         const xp = document.createElement('p');
