@@ -183,13 +183,15 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .resume .resume-item::before { border-color: var(--detail); }
 .hero .social-links a:focus-visible, .footer .social-links a:focus-visible { outline-color: var(--detail); }
 
-.hero { justify-content: flex-start; }
-.hero img { left: auto; right: 0; width: 54%; object-position: right center; }
+.index-page .header { background: rgb(0 0 0 / 88%); }
+.index-page .footer { background: #000; }
+.hero { justify-content: flex-start; background: #000; }
+.hero img { left: auto; right: 0; width: 54%; object-position: right center; mask-image: linear-gradient(to right, transparent, #000 16%); }
 .hero .container { width: 46%; margin: 0; padding-inline: clamp(20px, 4vw, 72px); }
 @media (max-width: 767px) {
   .hero { flex-direction: column; align-items: stretch; justify-content: center; padding: 88px 0 24px; min-height: auto; }
   .hero .container { width: 100%; padding-block: 16px 28px; }
-  .hero img { position: static; order: 1; width: 100%; height: auto; }
+  .hero img { position: static; order: 1; width: 100%; height: auto; mask-image: linear-gradient(to bottom, transparent, #000 9%, #000 94%, transparent); }
   .hero h2, .page-title .heading h1 { font-size: 2rem; }
   .about, .resume, .portfolio { padding: 28px 0; }
   .about .content, .resume .resume-item, .portfolio figure,
