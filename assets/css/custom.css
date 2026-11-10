@@ -391,3 +391,15 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   .about-intro { grid-template-columns: 1fr; gap: 20px; }
   .about-portrait img { width: 220px; margin-inline: auto; }
 }
+
+/* Ryškesnis judantis apvadas pagrindiniams informacijos blokams */
+.about .content, .contact .php-email-form, .progress-profile {
+  border: 3px solid transparent;
+  background: linear-gradient(var(--surface-color), var(--surface-color)) padding-box,
+              linear-gradient(115deg, var(--red), var(--orange), var(--aqua), var(--blue), var(--violet), var(--red)) border-box;
+  background-size: 100% 100%, 300% 100%;
+  animation: service-gradient 5s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .about .content, .contact .php-email-form, .progress-profile { animation: none; }
+}
