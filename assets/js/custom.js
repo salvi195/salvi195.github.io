@@ -167,12 +167,13 @@ if (board) {
     else if (xp < 150) { level = 2; rank = 'Praktikantas'; start = 50; next = 150; }
     else if (xp < 300) { level = 3; rank = 'Specialistas'; start = 150; next = 300; }
     else { level = 4; rank = 'Profesionalas'; }
-    document.querySelector('#xp-total').textContent = xp + ' XP';
-    document.querySelector('#rank').textContent = level + ' lygis · ' + rank;
+    document.querySelector('#profile-level').textContent = level + ' lygis';
+    document.querySelector('#rank').textContent = rank;
+    document.querySelector('#xp-number').textContent = xp;
     const percent = level === 4 ? 100 : (xp - start) / (next - start) * 100;
     document.querySelector('#xp-bar').value = percent;
-    document.querySelector('#xp-description').textContent = level === 4 ? 'Pasiektas aukščiausias lygis.' : 'Iki kito lygio: ' + (next - xp) + ' XP';
-    document.querySelector('#skill-statistics').textContent = 'Iš viso: ' + skills.length + ' · Atlikta: ' + completed.length + ' · ' + Math.round(completed.length / skills.length * 100) + '%';
+    document.querySelector('#xp-description').textContent = level === 4 ? 'Pasiektas aukščiausias lygis.' : 'Iki ' + (level + 1) + ' lygio liko ' + (next - xp) + ' XP';
+    document.querySelector('#skill-statistics').textContent = 'Įgūdžių atlikta: ' + completed.length + ' iš ' + skills.length + ' (' + Math.round(completed.length / skills.length * 100) + ' %)';
     updateAvatar(level);
     const conditions = [completed.length >= 1, completed.length >= 4, level === 4];
     document.querySelectorAll('.achievement').forEach((card, index) => {
