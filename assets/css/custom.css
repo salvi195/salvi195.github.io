@@ -1,6 +1,5 @@
-/* 1-2. Spalvos ir sriftai */
 :root {
-  /* Nuotraukos spalvos */
+
   --red: #f14e2f;
   --orange: #fe9c21;
   --blue: #30b2ff;
@@ -8,7 +7,6 @@
   --violet: #b18ae2;
   --gold: #fdc749;
   --panel-border: #302a24;
-  --page-accent: var(--orange);
   --default-font: "Segoe UI", Arial, sans-serif;
   --heading-font: Georgia, serif;
   --nav-font: "Segoe UI", Arial, sans-serif;
@@ -52,7 +50,6 @@ p { font-size: 1.05rem; line-height: 1.85; color: var(--default-color); margin-b
 .hero p { font-size: 1.3rem; }
 .contact .info-item p { font-size: 1.05rem; color: var(--default-color); }
 
-/* 3. Mygtukai ir nuorodos */
 .main p a { color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
 a:hover, .main p a:hover { color: #ffe9ca; }
 a:active { color: var(--red); }
@@ -68,7 +65,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 .contact .php-email-form button[type=submit]:hover, .scroll-top:hover { background: var(--gold); color: #0b0b0d; }
 .contact .php-email-form button[type=submit]:active, .scroll-top:active { background: var(--red); transform: translateY(2px); }
 
-/* 4. Tarpai ir turinio blokai */
 .about, .resume, .portfolio { padding: 48px 0; margin-bottom: 24px; }
 .about .content, .resume .resume-item, .portfolio figure,
 .skills .skills-content, .services-page .section > .container,
@@ -79,7 +75,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
   border-radius: 10px;
   box-shadow: 0 8px 24px #00000050;
 }
-.about .content { margin-top: 12px; border-top: 2px solid var(--gold); }
+.about .content { margin-top: 12px; }
 .about img, .portfolio img { border-radius: 6px; }
 .resume .resume-item { margin: 0 0 24px 12px; border-left: 2px solid var(--detail); }
 .resume .resume-item:last-child { padding-bottom: 28px; }
@@ -89,17 +85,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 .services-page .section > .container { width: calc(100% - 24px); }
 .contact .php-email-form { margin-top: 28px; }
 
-/* 5. Navigacijos juosta: fonas, krastine, seselis, tarpai */
 .header, .scrolled .header {
   background: #0b0b0d;
   border-bottom: 0;
   box-shadow: 0 4px 16px #00000030;
   padding: 14px 0;
 }
-/* Progreso juostos: fonas, aukstis, krastine ir apvalumas */
+
 .skills .progress { height: 72px; }
 .skills .progress-bar-wrap { height: 12px; background: #08090b; border: 1px solid var(--panel-border); border-radius: 6px; overflow: hidden; }
-/* Įgūdžių akcentai: kailio varis ir ekrano spalvos */
+
 .skills .progress-bar { height: 10px; background: var(--gold); border-radius: 5px; }
 .skills .col-lg-6:first-child .progress:nth-child(2) .progress-bar { background: var(--blue); }
 .skills .col-lg-6:first-child .progress:nth-child(3) .progress-bar { background: var(--red); }
@@ -107,7 +102,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 .skills .col-lg-6:last-child .progress:nth-child(2) .progress-bar { background: var(--orange); }
 .skills .col-lg-6:last-child .progress:nth-child(3) .progress-bar { background: var(--violet); }
 
-/* Papildoma 1. Sarasu pseudo-elementai ir skaitiklis */
 #services ul, #services ol { list-style: none; padding-left: 0; }
 #services li { position: relative; padding-left: 28px; margin-bottom: 14px; line-height: 1.75; }
 #services ul > li::before { content: "\2022"; position: absolute; left: 6px; color: var(--orange); }
@@ -127,7 +121,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 #services ul ul > li::before { content: "\2013"; color: #ffe9ca; }
 #services ul ul > li:last-child { margin-bottom: 0; }
 
-/* Papildoma 2. Lenteles antraste, zebra ir lygiavimas */
 #services .table { --bs-table-bg: var(--surface-color); --bs-table-color: #e9ddce; --bs-table-border-color: var(--panel-border); }
 #services .table th, #services .table td { padding: 16px; text-align: center; vertical-align: middle; }
 #services .table thead th { background: #201b16; color: var(--heading-color); font-weight: 600; }
@@ -135,8 +128,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 #services .table tbody tr:hover > * { background: #252019; }
 #services .table caption { padding: 12px 0; color: var(--default-color); }
 
-
-/* Viena antraščių spalva, nepermatomi tamsūs paviršiai */
 main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-item h4,
 .footer .sitename, .skills .progress .skill { color: var(--heading-color); }
 .glightbox-container .goverlay { background: #0b0b0d; }
@@ -153,7 +144,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 }
 .contact .php-email-form :is(input, textarea).form-control::placeholder { color: #c1b6ab; }
 .contact .php-email-form .form-control:focus { border-color: var(--aqua); }
-/* Vienodos ryškios spalvos visoms socialinių ikonų grupėms */
+
 .hero .social-links a, .footer .social-links a {
   color: var(--detail);
   background: #0b0b0d;
@@ -164,26 +155,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   color: #0b0b0d;
 }
 .hero p .typed { color: var(--blue); border-bottom-color: var(--aqua); }
-/* Nepermatoma kortelių paletė – tamsus pagrindas ir vienas ryškus akcentas */
-.about .content, .resume .resume-item, .portfolio figure { background: var(--surface-color); border-color: var(--panel-border); }
-.about .content { border-top-color: var(--orange); }
-.resume .resume-item { border-left-color: var(--detail); }
-.skills .skills-content { border-color: var(--panel-border); }
-.services-page .section > .container { border-color: var(--panel-border); }
-.services-page .section:last-child > .container { border-color: var(--panel-border); }
-.contact .php-email-form { border-color: var(--panel-border); }
-.portfolio .col-lg-4:nth-child(2) figure { border-color: var(--panel-border); }
-.portfolio .col-lg-4:nth-child(3) figure { border-color: var(--panel-border); }
-.resume .col-lg-6:last-child .resume-item { border-left-color: var(--detail); }
-.resume .col-lg-6:first-child .resume-item:last-child { border-left-color: var(--detail); }
-.skills .skills-content, .resume .col-lg-6:last-child .resume-item,
-.services-page .section > .container { background-color: var(--surface-color); }
-.portfolio .col-lg-4:nth-child(2) figure { background: var(--surface-color); border-top-color: var(--blue); }
-.portfolio .col-lg-4:nth-child(3) figure { background: var(--surface-color); border-top-color: var(--violet); }
-.portfolio figure { border-top-color: var(--red); }
-.contact .php-email-form { background: var(--surface-color); }
-.resume .col-lg-6:first-child .resume-item:last-child { background: var(--surface-color); }
-.services-page .section:last-child > .container { background: var(--surface-color); }
 .glightbox-clean .gslide-description { background: var(--surface-color); }
 .glightbox-clean .gslide-description .gslide-title { color: var(--heading-color); }
 .contact .col-md-6:nth-child(1) { --detail: var(--orange); }
@@ -204,17 +175,14 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .contact .info-item .social-links a:nth-child(4) { --detail: var(--aqua); }
 .hero .social-links a:nth-child(5), .footer .social-links a:nth-child(5),
 .contact .info-item .social-links a:nth-child(5) { --detail: var(--violet); }
-/* Kiekvienas patirties įrašas turi vieną atskirą akcentą */
+
 .resume .col-lg-6:first-child .resume-item { --detail: var(--red); }
 .resume .col-lg-6:first-child .resume-item:last-child { --detail: var(--violet); }
 .resume .col-lg-6:last-child .resume-item { --detail: var(--blue); }
 .resume .col-lg-6:last-child .resume-item:last-child { --detail: var(--aqua); }
-.resume .col-lg-6 .resume-item { border-left-color: var(--detail); }
 .resume .resume-item::before { border-color: var(--detail); }
-.portfolio figure { border-top-width: 2px; }
 .hero .social-links a:focus-visible, .footer .social-links a:focus-visible { outline-color: var(--detail); }
 
-/* Vardas ant juodo fono, nuotrauka šalia jo */
 .hero { justify-content: flex-start; }
 .hero img { left: auto; right: 0; width: 54%; object-position: right center; }
 .hero .container { width: 46%; margin: 0; padding-inline: clamp(20px, 4vw, 72px); }
@@ -222,16 +190,12 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   .hero { flex-direction: column; align-items: stretch; justify-content: center; padding: 88px 0 24px; min-height: auto; }
   .hero .container { width: 100%; padding-block: 16px 28px; }
   .hero img { position: static; order: 1; width: 100%; height: auto; }
-}
-
-@media (max-width: 767px) {
   .hero h2, .page-title .heading h1 { font-size: 2rem; }
   .about, .resume, .portfolio { padding: 28px 0; }
   .about .content, .resume .resume-item, .portfolio figure,
   .skills .skills-content, .services-page .section > .container { padding: 18px; }
 }
 
-/* LD10: maži pulsuojantys taškai prie antraščių */
 :is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::before,
 :is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::after {
   content: "";
@@ -251,11 +215,9 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   100% { transform: scale(0.75); opacity: 0.6; }
 }
 
-/* Tamsūs vietinių medijų valdikliai */
 .services-page audio, .services-page video { color-scheme: dark; background: #0b0b0d; }
 .services-page audio::-webkit-media-controls-panel { background: var(--surface-color); }
 
-/* Pagrindinio puslapio socialinės ikonos */
 .hero .social-links a:is(:hover, :focus-visible) i {
   display: inline-block;
   animation: icon-lift 0.5s ease-in-out;
@@ -264,7 +226,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   50% { transform: translateY(-3px); }
 }
 
-/* Paslaugos: dekoratyvinis krovimo žiedas */
 #services > .container > h2::after {
   content: "";
   display: inline-block;
@@ -281,7 +242,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   to { transform: rotate(360deg); }
 }
 
-/* Papildoma: judantis paslaugų bloko fonas */
 #services > .container {
   border: 1px solid transparent;
   background: linear-gradient(120deg, #0b0b0d, #11100e, #0b0e12) padding-box,
@@ -294,7 +254,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   to   { background-position: 100% 50%, 100% 50%; }
 }
 
-/* Papildoma: apskritimas ir rombas prie aprašymo */
 .about .content h2::before, .about .content h2::after {
   content: "";
   display: inline-block;
@@ -327,7 +286,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   }
 }
 
-/* LD11: forma ir jos rezultatai */
 .contact .php-email-form input.form-control { border-radius: 6px; padding: 10px 15px; font-size: 1rem; }
 .contact .php-email-form label { display: block; margin-bottom: 8px; }
 .contact .php-email-form .field-error { display: block; min-height: 22px; margin-top: 5px; color: #ff977e; }
@@ -340,9 +298,8 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 #form-result p { margin-bottom: 8px; }
 .rating-average { color: var(--aqua); }
 
-/* LD12: įgūdžių lenta */
 .progress-profile, .skill-column, .achievement { background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 10px; padding: 24px; }
-.progress-profile { border-color: var(--violet); display: flex; gap: 28px; align-items: center; }
+.progress-profile { display: flex; gap: 28px; align-items: center; }
 .progress-details { flex: 1; min-width: 0; font-variant-numeric: tabular-nums; }
 .profile-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 22px; margin-bottom: 20px; }
 .progress-details .profile-caption { margin: 0 0 4px; color: #c6bda9; font-size: .75rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
@@ -364,7 +321,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .skill-column:nth-child(3) { border-color: var(--aqua); }
 .skill-column h3 { font-size: 1.4rem; margin-bottom: 24px; }
 .skill-card { padding: 18px; margin-bottom: 14px; background: var(--surface-color); border: 1px solid var(--card-accent); border-top: 2px solid var(--card-accent); border-radius: 8px; }
-/* Kiekvieno įgūdžio spalva išlieka ir perkėlus kortelę. */
+
 .skill-card[data-color="0"] { --card-accent: var(--orange); }
 .skill-card[data-color="1"] { --card-accent: var(--blue); }
 .skill-card[data-color="2"] { --card-accent: var(--violet); }
@@ -380,15 +337,12 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .achievement { --card-accent: var(--gold); border-color: var(--card-accent); border-top: 2px solid var(--card-accent); }
 .achievement h3 { font-size: 1.3rem; }
 .achievement span { color: #b4c5cf; }
-.achievement.unlocked { border-color: var(--card-accent); }
 .achievement.unlocked span { color: var(--card-accent); }
-.avatar-credit { margin-top: 28px; font-size: 0.9rem; }
 @media (max-width: 900px) { #skill-board, .achievements { grid-template-columns: 1fr; } }
 @media (max-width: 575px) { .progress-profile { flex-direction: column; align-items: stretch; } .progress-profile img { align-self: center; } }
 
 .progress-profile #level-avatar { width: 160px; height: 160px; object-fit: contain; }
 
-/* Nedidelis gyvūno proporcijų personažas, centruotas šalia teksto */
 .about-intro { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; margin: 0; }
 .about-intro > .about-portrait { width: auto; padding: 0; position: relative; z-index: 1; }
 .about-portrait img { display: block; width: 260px; max-width: none; height: auto; object-fit: contain; }
@@ -398,7 +352,6 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   .about-portrait img { width: 220px; margin-inline: auto; }
 }
 
-/* Ryškesnis judantis apvadas pagrindiniams informacijos blokams */
 .about .content, .contact .php-email-form, .progress-profile {
   border: 3px solid transparent;
   background: linear-gradient(var(--surface-color), var(--surface-color)) padding-box,

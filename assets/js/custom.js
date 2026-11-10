@@ -1,6 +1,5 @@
 'use strict';
 
-/* LD11. Kontaktų forma */
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
   const fields = [...contactForm.querySelectorAll('input')];
@@ -79,7 +78,6 @@ if (contactForm) {
   updateForm();
 }
 
-/* LD12. Įgūdžių pažanga */
 const board = document.querySelector('#skill-board');
 if (board) {
   const states = ['Planuojama', 'Mokomasi', 'Atlikta'];
