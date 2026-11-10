@@ -342,7 +342,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 
 /* LD12: įgūdžių lenta */
 .progress-profile, .skill-column, .achievement { background: var(--surface-color); border: 1px solid var(--panel-border); border-radius: 10px; padding: 24px; }
-.progress-profile { border-color: var(--orange); display: flex; gap: 28px; align-items: center; }
+.progress-profile { border-color: var(--violet); display: flex; gap: 28px; align-items: center; }
 .progress-details { flex: 1; }
 .progress-details p { margin: 8px 0; }
 #xp-total { color: var(--gold); font-size: 1.3rem; }
@@ -353,11 +353,11 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .board-heading { margin: 36px 0 22px; }
 #skill-board, .achievements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .skill-column { padding: 18px; overflow: visible; }
-.skill-column:nth-child(1) { border-color: var(--orange); }
+.skill-column:nth-child(1) { border-color: var(--red); }
 .skill-column:nth-child(2) { border-color: var(--blue); }
 .skill-column:nth-child(3) { border-color: var(--aqua); }
 .skill-column h3 { font-size: 1.4rem; margin-bottom: 24px; }
-.skill-card { padding: 18px; margin-bottom: 14px; background: var(--surface-color); border: 1px solid var(--panel-border); border-top: 2px solid var(--card-accent); border-radius: 8px; }
+.skill-card { padding: 18px; margin-bottom: 14px; background: var(--surface-color); border: 1px solid var(--card-accent); border-top: 2px solid var(--card-accent); border-radius: 8px; }
 /* Kiekvieno įgūdžio spalva išlieka ir perkėlus kortelę. */
 .skill-card[data-color="0"] { --card-accent: var(--orange); }
 .skill-card[data-color="1"] { --card-accent: var(--blue); }
@@ -371,10 +371,7 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
 .skill-card p { margin-bottom: 12px; color: var(--card-accent); }
 .skill-card select { width: 100%; background: var(--surface-color); color: #ffe9ca; border: 1px solid var(--panel-border); }
 .skill-card select:focus { outline: 2px solid var(--card-accent); }
-.achievement:nth-child(1) { --card-accent: var(--orange); }
-.achievement:nth-child(2) { --card-accent: var(--blue); }
-.achievement:nth-child(3) { --card-accent: var(--aqua); }
-.achievement { border-top: 2px solid var(--card-accent); }
+.achievement { --card-accent: var(--gold); border-color: var(--card-accent); border-top: 2px solid var(--card-accent); }
 .achievement h3 { font-size: 1.3rem; }
 .achievement span { color: #b4c5cf; }
 .achievement.unlocked { border-color: var(--card-accent); }
