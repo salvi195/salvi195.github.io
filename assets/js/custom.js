@@ -165,7 +165,7 @@ if (board) {
     else if (xp < 150) { level = 2; rank = 'Praktikantas'; start = 50; next = 150; }
     else if (xp < 300) { level = 3; rank = 'Specialistas'; start = 150; next = 300; }
     else { level = 4; rank = 'Profesionalas'; }
-    document.querySelector('#profile-level').textContent = level + ' lygis';
+    document.querySelector('#profile-level').textContent = ['I', 'II', 'III', 'IV'][level - 1];
     document.querySelector('#rank').textContent = rank;
     document.querySelector('#xp-number').textContent = xp;
     const percent = level === 4 ? 100 : (xp - start) / (next - start) * 100;

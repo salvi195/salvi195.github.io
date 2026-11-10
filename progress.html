@@ -21,7 +21,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/custom.css?v=profilis-3" rel="stylesheet">
+  <link href="assets/css/custom.css?v=profilis-4" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Personal
@@ -61,13 +61,17 @@
   <main class="main"><div class="page-title"><div class="heading"><div class="container text-center"><h1>Įgūdžių pažanga</h1></div></div></div>
 <section class="section"><div class="container">
 <div class="progress-profile"><img id="level-avatar" src="assets/img/level-1.svg?v=avatar-svg-1" alt="Avataras – 1 lygis" width="160" height="160"><div class="progress-details">
-  <p id="profile-level"></p>
-  <div class="profile-heading">
-    <h2 id="rank"></h2>
-    <p id="xp-total"><span id="xp-number"></span> <small>XP</small></p>
+  <div class="rank-identity">
+    <p class="rank-mark"><span id="profile-level"></span> lygis</p>
+    <div>
+      <h2 id="rank"></h2>
+      <p id="skill-statistics" aria-live="polite"></p>
+    </div>
   </div>
-  <progress id="xp-bar" max="100" value="0" aria-label="Lygio pažanga"></progress>
-  <p id="skill-statistics" aria-live="polite"></p>
+  <div class="rank-score">
+    <p id="xp-total"><span id="xp-number"></span> <small>XP</small></p>
+    <progress id="xp-bar" max="100" value="0" aria-label="Lygio pažanga"></progress>
+  </div>
 </div></div>
 <h2 class="board-heading">Įgūdžių lenta</h2><div id="skill-board"></div>
 <h2 class="board-heading">Pasiekimai</h2><div class="achievements">
@@ -119,7 +123,7 @@
 
   <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/custom.js?v=profilis-3"></script>
+  <script src="assets/js/custom.js?v=profilis-4"></script>
 </body>
 
 </html>
