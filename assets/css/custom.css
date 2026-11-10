@@ -7,7 +7,6 @@
   --aqua: #33e6e3;
   --violet: #b18ae2;
   --gold: #fdc749;
-  --divider-color: #3c3022;
   --panel-border: #302a24;
   --page-accent: var(--orange);
   --default-font: "Segoe UI", Arial, sans-serif;
@@ -93,7 +92,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 /* 5. Navigacijos juosta: fonas, krastine, seselis, tarpai */
 .header, .scrolled .header {
   background: #0b0b0d;
-  border-bottom: 1px solid var(--divider-color);
+  border-bottom: 0;
   box-shadow: 0 4px 16px #00000030;
   padding: 14px 0;
 }
@@ -141,10 +140,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ffe9ca; outline-offs
 main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-item h4,
 .footer .sitename, .skills .progress .skill { color: var(--heading-color); }
 .glightbox-container .goverlay { background: #0b0b0d; }
-.page-title nav { background: #0b0b0d; border-top: 1px solid var(--divider-color); border-bottom: 1px solid var(--divider-color); }
-.footer { background: #0b0b0d; }
-.footer { border-top: 1px solid var(--divider-color); }
-.footer .copyright { border-top-color: var(--divider-color); }
+.page-title .heading { border-top: 0; }
+.page-title nav { background: #0b0b0d; border: 0; }
+.footer { background: #0b0b0d; border-top: 0; padding: 48px 0 32px; }
+.footer .copyright { border-top: 0; padding-top: 12px; }
 .navmenu a.active, .navmenu a:hover { color: var(--accent-color); }
 .mobile-nav-active .navmenu { background: #0b0b0d; }
 .mobile-nav-active .mobile-nav-toggle { color: var(--heading-color); }
@@ -232,23 +231,24 @@ main :is(.h4, .h5), .section-title h2, .resume .resume-title, .resume .resume-it
   .skills .skills-content, .services-page .section > .container { padding: 18px; }
 }
 
-/* LD10: dekoratyviniai antraščių brūkšneliai */
+/* LD10: maži pulsuojantys taškai prie antraščių */
 :is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::before,
 :is(.page-title .heading h1, .hero h2, .section-title h2, .starter-page-page main h1)::after {
   content: "";
   display: inline-block;
-  width: 0.45em;
-  height: 2px;
-  margin: 0 0.2em;
+  width: 4px;
+  height: 4px;
+  margin: 0 0.35em;
   vertical-align: middle;
-  background: var(--page-accent);
+  border-radius: 50%;
+  background: var(--heading-color);
   animation: heading-pulse 4s ease-in-out infinite;
 }
 @keyframes heading-pulse {
-  0%   { transform: scaleX(0.6); opacity: 0.55; }
-  30%  { transform: scaleX(1);   opacity: 1; }
-  60%  { transform: scaleX(0.8); opacity: 0.75; }
-  100% { transform: scaleX(0.6); opacity: 0.55; }
+  0%   { transform: scale(0.75); opacity: 0.6; }
+  30%  { transform: scale(1);    opacity: 1; }
+  60%  { transform: scale(0.9);  opacity: 0.8; }
+  100% { transform: scale(0.75); opacity: 0.6; }
 }
 
 /* Tamsūs vietinių medijų valdikliai */
