@@ -169,10 +169,12 @@ if (board) {
     document.querySelector('#rank').textContent = rank;
     document.querySelector('#xp-number').textContent = xp;
     const percent = level === 4 ? 100 : (xp - start) / (next - start) * 100;
-    document.querySelector('#xp-bar').value = percent;
-    document.querySelector('#xp-description').textContent = level === 4 ? 'Aukščiausias lygis' : ['Iki antrojo lygio', 'Iki trečiojo lygio', 'Iki ketvirtojo lygio'][level - 1];
-    document.querySelector('#xp-remaining').textContent = level === 4 ? 'Pasiektas' : 'Liko ' + (next - xp) + ' XP';
-    document.querySelector('#skill-count').textContent = completed.length + ' iš ' + skills.length + ' (' + Math.round(completed.length / skills.length * 100) + ' %)';
+    const bar = document.querySelector('#xp-bar');
+    bar.value = percent;
+    bar.title = level === 4 ? 'Pasiektas aukščiausias lygis' : 'Iki kito lygio liko ' + (next - xp) + ' XP';
+    bar.setAttribute('aria-valuetext', bar.title);
+    const mastered = Math.round(completed.length / skills.length * 100);
+    document.querySelector('#skill-statistics').textContent = `Įvaldyta ${completed.length} iš ${skills.length} įgūdžių · ${mastered} %`;
     updateAvatar(level);
     const conditions = [completed.length >= 1, completed.length >= 4, level === 4];
     document.querySelectorAll('.achievement').forEach((card, index) => {
